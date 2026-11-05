@@ -1,0 +1,121 @@
+.accounts-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  height: 100%;
+}
+
+.accounts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.accounts-summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.account-summary-card {
+  flex: 1;
+  min-width: 250px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.account-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.account-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.account-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.account-icon-wrap.bank {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.account-icon-wrap.cash {
+  color: #10b981;
+  background: #d1fae5;
+}
+
+.account-icon-wrap.credit {
+  color: #f59e0b;
+  background: #fef3c7;
+}
+
+.account-icon-wrap.wallet {
+  color: #8b5cf6;
+  background: #ede9fe;
+}
+
+.account-card-body {
+  margin-top: var(--space-2);
+}
+
+.account-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.view-tx-btn {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.view-tx-btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+}
